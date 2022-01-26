@@ -6,7 +6,9 @@ import java.util.Random;
 public class Password {
 
     public static String generatePassword(int size, boolean numbers, boolean characters) {
+        //the variable that will be returned as the password
         String returnedPassword = "";
+        //the list of all numbers, letters and characters
         List<String> numberElements = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
         List<String> charactersElements = Arrays.asList("!", "@", "#", "$", "%", "^", "&", "*", ")", "(", "-", "_", "+", "=",
                 "}", "{", "]", "[", "|", ";", ":", "?", "/", ".", ",", ">", "<");
@@ -15,6 +17,8 @@ public class Password {
         ArrayList<String> numberList = new ArrayList<>(numberElements);
         ArrayList<String> characterList = new ArrayList<>(charactersElements);
         ArrayList<String> lettersList = new ArrayList<>(letterElements);
+        //this method wiill randomly add numbers, letters and characters to the 'returnedPassword' variable
+        // and then will shuffle it
         if (numbers || characters) {
             ArrayList<String> returned = new ArrayList<>();
             int length = size / 2;

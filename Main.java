@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import java.awt.datatransfer.StringSelection;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
+
+//this main class is the main view
 public class Main extends Application {
 
     public static void main(String[] args) {
@@ -47,6 +49,7 @@ public class Main extends Application {
         primaryStage.show();
         passwordLenght.setShowTickLabels(true);
         passwordLenght.setShowTickMarks(true);
+        //this action will take your inputs and return the password
         generate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -57,6 +60,7 @@ public class Main extends Application {
                 password.setText(passwordAnswer);
             }
         });
+        //this action will copy the password to your cliboard
         copy.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
